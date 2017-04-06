@@ -1,5 +1,8 @@
+# MIPS-Insertion Sort
+# 2017.4.6
+
 .data
-Array: .word 9, 2, 8, 1, 6, 5, 4, 10, 3, 7 # you can change the element of array
+Array: .word 9, 2, 8, 1, 6, 5, 4, 10, 3, 7 
 
 .text
 main:
@@ -13,7 +16,7 @@ main:
 	# $t7 : the value of (length-1)
 	# $t9 : temp
 	addi $t0, $zero, 4097      # $t0 = 0x00001001
-	sll  $t0, $t0, 16          # set the base address of your array into $t0 = 0x10010000    	
+	sll  $t0, $t0, 16          # set the base address of the array into $t0 = 0x10010000    	
 	addi $t2, $zero, 1			# i = 1
 	addi $t7, $zero, 10			# length = 10
 	sub $t7, $t7, 1				# 10 - 1
